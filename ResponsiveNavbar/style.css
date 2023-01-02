@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgb(247, 243, 243);
+    color: #fff;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .navbar {
-    background-color: rgb(82, 9, 150);
+    background-color: rgb(112, 30, 189);
     display: flex;
     justify-content: space-around;
     align-items: center;
     line-height: 5rem;
 }
+
 .left h1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     cursor: pointer;
 }
+
 .checkBtn {
     display: none;
 }
@@ -29,13 +33,19 @@
     cursor: pointer;
     font-size: 30px;
     float: right;
-    color: #ed1e79;
+    color: #e4156f;
     line-height: 80px;
 }
+
+.right ul {
+    display: flex;
+    list-style: none;
+}
+
 .right ul li a {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: white;
+    padding: 12px 20px;
+    font-size: 1.3rem;
+    color: rgb(255, 138, 5);
     cursor: pointer;
     text-decoration: none;
     transition: all 1s;
@@ -44,5 +54,33 @@
 .right ul li a:hover {
     background-color: #fff;
     border-radius: 7px;
-    color: rgb(38, 15, 59);
+    color: rgb(23, 5, 39);
+}
+
+@media screen and (max-width:805px) {
+    .list {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(64, 57, 70);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 4rem;
+        left: 100%;
+        transition: all 1s;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .checkBtn {
+        display: block;
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
+
 }
